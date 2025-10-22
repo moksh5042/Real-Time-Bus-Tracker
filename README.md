@@ -95,7 +95,9 @@ expo start
      ```
      GOOGLE_MAPS_API_KEY=your_api_key_here
      ```
+   - This key will be used for both the React Native Maps integration and the native platforms (iOS/Android)
    - Never commit the `.env` file to version control
+   - Run `expo prebuild` after updating the environment variables
 3. Update any environment-specific variables
 
 ## Contact
