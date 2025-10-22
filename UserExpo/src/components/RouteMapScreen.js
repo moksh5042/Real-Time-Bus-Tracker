@@ -3,8 +3,7 @@ import { View, StyleSheet, ActivityIndicator } from "react-native";
 import MapView, { Polyline, Marker } from "react-native-maps";
 import { subscribeToRoutes } from "../services/routeService";
 import polyline from "@mapbox/polyline";
-
-const GOOGLE_MAPS_API_KEY = "AIzaSyCMfkR-q8J4j6Nb-mMmBYRM2Cxe_2yAtqY";
+import config from "../../config";
 
 export default function RouteMapScreen() {
   const [routes, setRoutes] = useState({});
@@ -27,7 +26,7 @@ export default function RouteMapScreen() {
     if (!selectedRoute) return;
     const { start, end, waypoints } = selectedRoute;
     const wayStr = waypoints?.map(w => `${w.lat},${w.lng}`).join("|") || "";
-    const url = `https://maps.googleapis.com/maps/api/directions/json?origin=${start.lat},${start.lng}&destination=${end.lat},${end.lng}&key=${GOOGLE_MAPS_API_KEY}&waypoints=${wayStr}`;
+    const url = `https://maps.googleapis.com/maps/api/directions/json?origin=${start.lat},${start.lng}&destination=${end.lat},${end.lng}&key=${config.GOOGLE_MAPS_API_KEY}&waypoints=${wayStr}`;
     fetch(url)
       .then(res => res.json())
       .then(json => {

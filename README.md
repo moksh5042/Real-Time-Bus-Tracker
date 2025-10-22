@@ -89,7 +89,13 @@ expo start
 
 ### Configuration
 1. Set up your Firebase configuration in `firebaseConfig.js`
-2. Configure your Google Maps API key in the respective configuration files
+2. Configure your Google Maps API key:
+   - Create a `.env` file in the UserExpo directory
+   - Add your Google Maps API key:
+     ```
+     GOOGLE_MAPS_API_KEY=your_api_key_here
+     ```
+   - Never commit the `.env` file to version control
 3. Update any environment-specific variables
 
 ## Contact
