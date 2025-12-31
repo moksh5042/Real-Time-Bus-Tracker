@@ -1,6 +1,6 @@
 # Real-Time Bus Tracker
 
-A real-time bus tracking system consisting of two mobile applications: one for bus drivers to share their location and another for users to track bus locations and routes.
+A real-time bus tracking system consisting of two mobile applications: one for bus drivers to share their location and another for users to track bus locations and routes and bus information.
 
 ## Project Structure
 
